@@ -1,0 +1,109 @@
+*{
+    font-family: museo-sans-rounded, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    margin-top: 0px;
+}
+
+body {
+    background-color: black;
+}
+
+/* Header */
+#header {
+    margin-top: 30px;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: -83px;
+}
+
+#header #logo {
+    background: url(../media/Test.jpg) center no-repeat;
+    width: 182px;
+    height: 87px;
+    display: block;
+    text-indent: -9999em;
+    cursor: pointer;
+    background-size: contain;
+    float: left;
+    left: 80px;
+}
+
+/* Header-end */
+
+/* Navigatie */
+#logo {
+    width: 189px;
+    height: 88px;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    left: 40%;
+    margin-left: -95px;
+    text-indent: -9999em;
+    background: url(../media/Test.jpg) no-repeat;
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+}
+
+nav > a {
+    font-size: 20px;
+    color: white;
+}
+/* Navigatie-end */
+
+
+
+
+
+/* Main */
+
+
+
+
+
+
+/* Main-end */
+
+
+
+
+
+/* Footer */
+
+footer {
+    display: grid;
+}
+
+.footer-main{
+    background-color: grey;
+    height: 400px;
+}
+
+#button-contact{
+
+}
+
+/* Footer-end */
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  }
