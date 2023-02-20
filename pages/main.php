@@ -21,9 +21,9 @@
     <section class="nav-container">
         <nav id="navbar">
             <a href="#" id="logo" title="Tjascado">Tjascado</a>
-            <a href="#" title="Review">Review</a>
-            <a href="#" title="About-us">About-us</a>
-            <a href="#" title="Contact">Contact</a>
+            <a href="../pages/review.php" title="Review">Review</a>
+            <a href="../pages/aboutus.php" title="About-us">About-us</a>
+            <a href="../pages/contact.php" title="Contact">Contact</a>
         </nav>
         <div></div>
     </section>
@@ -58,11 +58,11 @@
         </div>
         <div class="contact">
             <h1>Contact:</h1>
-                <button id="button-contact"><a href="#">Klik hier om contact op te nemen.</a></button>
+                <button id="button-contact"><a href="../pages/contact.php">Klik hier om contact op te nemen.</a></button>
         </div>
         <div class="About-us">
             <h1>About us:</h1>
-                <button id="button-contact"><a href="#">Klik hier om meer over ons te weten.</a></button>
+                <button id="button-contact"><a href="../pages/aboutus.php">Klik hier om meer over ons te weten.</a></button>
         </div>
     </div>
 </footer>
