@@ -9,7 +9,7 @@
     <meta name="keywords" content="EnergieDrank, ALA, Tjascado">
     <meta name="robots" content="noindex, nofollow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
+    <meta name="language" content="Dutch">
     <meta name="author" content="Don, Silas, Nico, Tjeerd">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
