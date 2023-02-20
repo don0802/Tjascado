@@ -1,0 +1,48 @@
+html {
+    margin: 0px;
+}
+
+
+.logo {
+    height: 100px;
+}
+
+.navbar #myLinks {
+    display: none;
+  }
+  
+  .navbar a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .navbar .icon {
+    color: white;
+  }
+
+
+  .navbar a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  #myLinks a:hover {
+    background-color: gray;
+    color: black;
+  }
+  
+
+
+  main {
+    height: 100vw;
+  }
+
+  .open-nav {
+    display: flex;
+  }
