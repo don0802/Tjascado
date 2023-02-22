@@ -1,0 +1,18 @@
+#home-header{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#home-header > nav{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    place-self: center;
+    margin: 10px;
+}
+
+#home-header > nav > a{
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    font-size: 10px;
+}
