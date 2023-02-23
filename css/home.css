@@ -1,18 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+body{
+    background-color: black;
+}
+
+
+/*______________________________________________________________HEADER___________________________________________________________________*/
+
 #home-header{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+}
+
+#home-art-1 >  a > img{
+    height: 50px;
+    margin: 15px;
+    transition: transform .2s;
+}
+
+#home-art-1 >  a > img:hover {
+    transform: scale(1.12); 
+}
+
+#home-art-2{
+    display: flex;
+    place-self: center;
+    margin-top: 16px;
+    margin-left: 100px;
+}
+
+#home-img1, #home-img2{
+    height: 18px;
+    margin-left: 50px;
 }
 
 #home-header > nav{
     grid-column-start: 2;
     grid-column-end: 4;
     place-self: center;
-    margin: 10px;
+    margin-top: 10px;
+    
 }
 
 #home-header > nav > a{
+    position: relative;
     text-decoration: none;
-    color: black;
-    padding: 20px;
-    font-size: 10px;
+    color: white;
+    margin: 50px;
+    font-size: 18px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#home-header > nav > a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+#home-header > nav > a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+/*______________________________________________________________MAIN / VIDEO___________________________________________________________________*/
+
+#promovideo-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #promovideo-1{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #promovideo-1{
+        width: auto;
+        height: 100%;
+    }
 }
