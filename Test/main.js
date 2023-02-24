@@ -8,7 +8,7 @@ function myFunction() {
 }
 
 window.onscroll = function() {myScroll()};
-var navbar = document.getElementById("navbar");
+var navbar = document.getElementById("home-header");
 var sticky = navbar.offsetTop;
 function myScroll() {
   if (window.pageYOffset >= sticky) {
@@ -17,3 +17,14 @@ function myScroll() {
     navbar.classList.remove("sticky");
   }
 }
+
+function toggleSearch() {
+  const icon = document.querySelector(".icon");
+  const search = document.querySelector(".search");
+  if (icon) {
+    icon.onclick = function(){
+      search.classList.toggle("active")
+    }
+  }
+}
+toggleSearch();
