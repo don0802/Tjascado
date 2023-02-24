@@ -1,48 +1,161 @@
-html {
-    margin: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+body{
+    background-color: black;
 }
 
 
-.logo {
-    height: 100px;
+/*______________________________________________________________HEADER___________________________________________________________________*/
+
+#home-header{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
-.navbar #myLinks {
-    display: none;
-  }
-  
-  .navbar a {
-    color: black;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-  
-  .navbar .icon {
-    color: white;
-  }
+#home-art-1 >  a > img{
+    height: 50px;
+    margin: 15px;
+    transition: transform .2s;
+}
 
+#home-art-1 >  a > img:hover {
+    transform: scale(1.12); 
+}
 
-  .navbar a.icon {
-    background: black;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  
-  #myLinks a:hover {
-    background-color: gray;
-    color: black;
-  }
-  
-
-
-  main {
-    height: 100vw;
-  }
-
-  .open-nav {
+#home-art-2{
     display: flex;
+    place-self: center;
+    margin-top: 16px;
+    margin-left: 100px;
+}
+
+#home-img1, #home-img2{
+    height: 18px;
+    margin-left: 50px;
+}
+
+#home-header > nav{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    place-self: center;
+    margin-top: 10px;
+}
+
+#home-header > nav > a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    margin: 50px;
+    font-size: 18px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#home-header > nav > a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
   }
+  
+#home-header > nav > a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+/*______________________________________________________________MAIN / VIDEO___________________________________________________________________*/
+
+#promovideo-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #promovideo-1{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #promovideo-1{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/*______________________________________________________________SEARCH BAR___________________________________________________________________*/
+
+.search {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  transition: 0.5s;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.search .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.search .icon::before {
+  content: '';
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border: 3px solid white;
+  border-radius: 50%;
+  transform: translate(-4px,-4px);
+}
+
+.search .icon::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 12px;
+  background: white;
+  transform: translate(6px,6px) rotate(315deg);
+}
+
+.search.active {
+  width: 222px;
+}
+.search .input {
+  position: relative;
+  width: 300px;
+  height: 30px;
+  left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search .input input {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  left: 0px;
+}
