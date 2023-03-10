@@ -196,10 +196,12 @@ p, a, h1, h2{
 }
 
 #review-art2{
-    display: grid;
-    justify-self: center;
-    grid-template-columns: 100%;
-    grid-template-rows: 33.33% 66.66%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: 100vh;
+    gap: 30px;
+    background: black;
 
     grid-column-start: 2;
     grid-column-end: 6;
@@ -221,7 +223,19 @@ p, a, h1, h2{
 }
 
 #review-art2 > input{
-    width: 100%;
+    width: 99.5%;
+    height: 100%;
     border: 1px solid white;
     background: black;
+    outline: none;
+    color: white;
+    font-size: 10px;
+}
+
+#review-art2 > span{
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: white;
 }
