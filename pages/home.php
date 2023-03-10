@@ -24,9 +24,9 @@
             <source src="../media/video/promotievideo-temp-1.mp4" type="video/mp4">
             </video>
         <nav>
-            <a href="../pages/review.html">Reviews</a>
-            <a href="pages/aboutus.html">About us</a>
-            <a href="pages/contact.html">Contact</a>
+            <a href="../pages/review.php">Reviews</a>
+            <a href="../pages/aboutus.php">About us</a>
+            <a href="../pages/contact.php">Contact</a>
         </nav>
             <article id="header-art-2">
                 <a><img src="../media/afbeeldingen//Home/search-transparent-white1.png" id="header-img1"></a>
