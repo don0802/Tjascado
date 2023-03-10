@@ -25,13 +25,8 @@
             </video>
         <nav>
             <a href="../pages/review.php">Reviews</a>
-<<<<<<< HEAD
             <a href="../pages/aboutus.php">About us</a>
             <a href="../pages/contact.php">Contact</a>
-=======
-            <a href="pages/aboutus.php">About us</a>
-            <a href="pages/contact.php">Contact</a>
->>>>>>> 35692214c43d4cb391f5dd0fc8d7324b8966db20
         </nav>
             <article id="header-art-2">
                 <a><img src="../media/afbeeldingen//Home/search-transparent-white1.png" id="header-img1"></a>
