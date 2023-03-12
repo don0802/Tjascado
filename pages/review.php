@@ -1,3 +1,11 @@
+<?php
+    try{
+        $conn = new mysqli("localhost", "root", "", "energy");
+    }catch(Exception $e){
+        $error = $e->getMessage();
+        echo $error;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +36,22 @@
             <img id="review-img1" src="../media/afbeeldingen/Review/tjascado_zero_transparant2.png" alt="Tjascado Zero">
                 <h1 id="review-titel">Tjascado Zero</h1>
                 <p>Aantal beoordelingen: <b>5.403</b></p>
-                    <h1 id="review-cijfer">7.9</h1>
+                <article id="review-art1">
+            <img id="review-img1" src="../media/afbeeldingen/Review/tjascado_zero_transparant2.png" alt="Tjascado Zero">
+                <h1 id="review-titel">Tjascado Zero</h1>
+                <p>Aantal beoordelingen: <b>5.403</b></p>
+<?php
+    try{
+    $sql = "SELECT AVG(cijfer) FROM reacties";
+    $result = $conn->query($sql);
+    while($row = $result->fetch_object()){
+        echo '<h1 id="review-cijfer">'; .$row->cijfer '</h1>';}
+}
+        $result->close();
+        catch(Exception $e){
+            echo "er zit een fout in de kwerrieeee";
+        }
+?>
         </article>
         <article id="review-art2">
             <input type="text" required="required">

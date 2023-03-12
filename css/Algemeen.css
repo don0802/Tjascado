@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 
-p, a, h1, h2{
+p, a, h1, h2, h3, h4, h5{
     color: white;
     font-family: 'Titillium Web', sans-serif;
 }
@@ -196,17 +196,16 @@ p, a, h1, h2{
 }
 
 #review-art2{
-    display: flex;
-    justify-content: center;
+    display: grid;
     align-items: center;
-    flex-direction: 100vh;
-    gap: 30px;
     background: black;
+
+    grid-template-columns: repeat(12, 1fr);
 
     grid-column-start: 2;
     grid-column-end: 6;
 
-    height: 150px;
+    height: 100px;
     width: 100%;
     margin-top: 50px;
 
@@ -223,19 +222,71 @@ p, a, h1, h2{
 }
 
 #review-art2 > input{
-    width: 99.5%;
-    height: 100%;
-    border: 1px solid white;
-    background: black;
-    outline: none;
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 11;
+    width: 100%;
+    height: 80%;
+    background: none;
+    border-style: none;
     color: white;
-    font-size: 10px;
+    font-size: 18px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
 }
 
 #review-art2 > span{
+    font-family: 'Titillium Web', sans-serif;
     position: absolute;
-    padding: 10px;
     pointer-events: none;
     font-size: 1em;
     color: white;
+    padding-left: 90px;
+    transition: 0.5s;
+    font-size: 20px;
+
+}
+
+#review-art2 input:valid ~ span{
+    color: transparent;
+    transform: translateX(0px) translateY(-90%);
+}
+
+#review-art3{
+    position: relative;
+    display: grid;
+    background: rgb(0, 0, 0);
+    height: 100%;
+    width: 100%;
+    grid-column-start: 12;
+    grid-column-end: 13;
+    transition: 0.1s;
+}
+
+#review-art3 > h6{
+    justify-self: center;
+    color: rgb(255, 255, 255);
+    font-size: 80px;
+    margin: 0px;
+    
+}
+
+#review-art3:hover{
+    position: relative;
+    display: grid;
+    background: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    grid-column-start: 12;
+    grid-column-end: 13;
+    transition: 0.1s;
+}
+
+#review-art3:hover > h6{
+    justify-self: center;
+    color: rgb(0, 0, 0);
+    font-size: 80px;
+    margin: 0px;
 }
