@@ -52,7 +52,6 @@
                     </article>
                     <article class="forget">
                         <label for=""><input type="checkbox">Remember Me</label>
-                      
                     </article>
                     <button>Log in</button>
                 </form>
