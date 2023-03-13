@@ -21,7 +21,7 @@
     <!----------------------------------------------------------HEADER------------------------------------------------------------------------->
     <header id="header">
         <article id="header-art-1">
-            <a href="../pages/home.php"><img src="../media/afbeeldingen//Home/Vrumona-logo-transparant-wit.png"></a>
+            <a href="..//pages/home.php"><img src="../media/afbeeldingen//Home/Vrumona-logo-transparant-wit.png"></a>
         </article>
         <nav>
             <a href="#">Reviews</a>
