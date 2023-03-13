@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+p, a, h1, h2, h3, h4, h5{
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#home-body{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    background-color: black;
+}
+
+#home-review{
+    background-color: black;
+}
+
+
+/*______________________________________________________________[  ALGEMEEN  ]___________________________________________________________________*/
+
+#header{
+    display: grid;
+    align-content: space-between;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#header-art-1 >  a > img{
+    height: 50px;
+    margin: 15px;
+    transition: transform .2s;
+}
+
+#header-art-1 >  a > img:hover {
+    transform: scale(1.03); 
+}
+
+#header-art-2{
+    display: flex;
+    place-self: center;
+    margin-top: 16px;
+    margin-left: 100px;
+}
+
+#header-img1, #header-img2{
+    height: 18px;
+    margin-left: 50px;
+}
+
+#header > nav{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    place-self: center;
+    margin-top: 10px;
+    
+}
+
+#header > nav > a{
+    position: relative;
+    text-decoration: none;
+    margin: 50px;
+    font-size: 18px;
+}
+
+#header > nav > a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+#header > nav > a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
+/*______________________________________________________________[  HOME  ]___________________________________________________________________*/
+
+#promovideo-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #promovideo-1{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #promovideo-1{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#home-main-art-1{
+    margin-top: 50px;
+}
+
+#home-main-art-1 > img{
+    margin: 0px;
+    width: 100%;
+}
+
+
+/*______________________________________________________________[  REVIEW  ]___________________________________________________________________*/
+
+#review-main{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 50px;
+}
+
+#review-art1{
+    display: grid;
+    justify-self: center;
+    grid-template-columns: 40% 30% 30%;
+    grid-template-rows: 33.33% 16.33% 50.01%;
+
+    grid-column-start: 2;
+    grid-column-end: 6;
+
+    height: 300px;
+    width: 100%;
+
+    border-color: white;
+    border-width: 3px;
+    border-radius: 0px;
+    border-style: solid;
+    box-shadow: 5px 8px white;
+}
+
+#review-art1 > p{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#review-titel{
+    font-size: 50px;
+}
+
+#review-cijfer{
+    font-size: 125px;
+
+    justify-self: center;
+    align-self: center;
+
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+#review-img1{
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    height: 80%;
+    width: auto;
+}
+
+#review-sec1{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 70%;
+    width: 90%;
+    align-self: center;
+}
+
+#review-img2{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 8;
+    height: 80%;
+    width: 100%;
+    z-index: -1;
+}
+
+#review-art2{
+    display: grid;
+    align-items: center;
+    background: black;
+
+    grid-template-columns: repeat(12, 1fr);
+
+    grid-column-start: 2;
+    grid-column-end: 6;
+
+    height: 100px;
+    width: 100%;
+    margin-top: 50px;
+
+    border-color: white;
+    border-width: 3px;
+    border-radius: 0px;
+    border-style: solid;
+    box-shadow: 5px 8px white;
+}
+
+#review-titel2{
+    place-self: center;
+    font-size: 20px;
+}
+
+#review-art2 > input{
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 11;
+    width: 100%;
+    height: 80%;
+    background: none;
+    border-style: none;
+    color: white;
+    font-size: 18px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+#review-art2 > span{
+    font-family: 'Titillium Web', sans-serif;
+    position: absolute;
+    pointer-events: none;
+    font-size: 1em;
+    color: white;
+    padding-left: 90px;
+    transition: 0.5s;
+    font-size: 20px;
+
+}
+
+#review-art2 input:valid ~ span{
+    color: transparent;
+    transform: translateX(0px) translateY(-90%);
+}
+
+#review-art3{
+    position: relative;
+    display: grid;
+    background: rgb(0, 0, 0);
+    height: 100%;
+    width: 100%;
+    grid-column-start: 12;
+    grid-column-end: 13;
+    transition: 0.1s;
+}
+
+#review-art3 > h6{
+    justify-self: center;
+    color: rgb(255, 255, 255);
+    font-size: 80px;
+    margin: 0px;
+    
+}
+
+#review-art3:hover{
+    position: relative;
+    display: grid;
+    background: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    grid-column-start: 12;
+    grid-column-end: 13;
+    transition: 0.1s;
+}
+
+#review-art3:hover > h6{
+    justify-self: center;
+    color: rgb(0, 0, 0);
+    font-size: 80px;
+    margin: 0px;
+}
