@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 
+body {
+    margin: 0px;
+}
 p, a, h1, h2, h3, h4, h5{
     color: white;
     font-family: 'Titillium Web', sans-serif;
@@ -15,6 +18,9 @@ p, a, h1, h2, h3, h4, h5{
     background-color: black;
 }
 
+.login {
+    align-items: center;
+  }
 
 /*______________________________________________________________[  ALGEMEEN  ]___________________________________________________________________*/
 
@@ -44,8 +50,8 @@ p, a, h1, h2, h3, h4, h5{
 }
 
 #header-img1, #header-img2{
-    height: 18px;
-    margin-left: 50px;
+    height: 24px;
+    margin-left: 34px;
 }
 
 #header > nav{
@@ -81,15 +87,23 @@ p, a, h1, h2, h3, h4, h5{
     transform-origin: bottom left;
   }
 
+#header-art-1{
+    display: flex;
+    justify-content: center;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+}
 
 /*______________________________________________________________[  HOME  ]___________________________________________________________________*/
+
 
 #promovideo-1{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     z-index: -1;
     object-fit: cover;
 }
@@ -97,7 +111,7 @@ p, a, h1, h2, h3, h4, h5{
 @media (min-aspect-ratio: 16/9) {
     #promovideo-1{
         width: 100%;
-        height: auto;
+        height: 100%;
     }
 }
 
@@ -108,6 +122,7 @@ p, a, h1, h2, h3, h4, h5{
     }
 }
 
+
 #home-main-art-1{
     margin-top: 50px;
 }
@@ -117,6 +132,21 @@ p, a, h1, h2, h3, h4, h5{
     width: 100%;
 }
 
+#home-img1, #home-img2{
+    height: 24px;
+    margin-left: 34px;
+}
+
+#home-art-1 {
+    display: flex;
+    align-items: center;
+}
+
+#home-art-2 {
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
 
 /*______________________________________________________________[  REVIEW  ]___________________________________________________________________*/
 
@@ -290,3 +320,75 @@ textarea:focus, input:focus{
     font-size: 80px;
     margin: 0px;
 }
+
+/*______________________________________________________________SEARCH BAR___________________________________________________________________*/
+
+.search {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    transition: 0.5s;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  
+  .search .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  
+  .search .icon::before {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border: 3px solid white;
+    border-radius: 50%;
+    transform: translate(-4px,-4px);
+  }
+  
+  .search .icon::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 12px;
+    background: white;
+    transform: translate(6px,6px) rotate(315deg);
+  }
+  
+  .search.active {
+    width: 222px;
+  }
+  
+  .search .input {
+    position: relative;
+    width: 300px;
+    height: 30px;
+    left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  .search .input input {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    left: 0px;
+    color: white;
+    background: transparent;
+  }

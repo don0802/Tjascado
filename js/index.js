@@ -1,7 +1,16 @@
-window.onscroll = function() {myNavbar()};
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+window.onscroll = function() {myScroll()};
 var navbar = document.getElementById("home-header");
 var sticky = navbar.offsetTop;
-function myNavbar() {
+function myScroll() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
   } else {

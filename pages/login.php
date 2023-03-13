@@ -5,7 +5,7 @@
     <meta name="description" content="Tjascado is een website voor ons ALA project die zich plaatsvindt in de derde periode,  wij promoten een energie drankje!">
     <meta name="keywords" content="EnergieDrank, ALA, Tjascado">
     <meta name="robots" content="noindex, nofollow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset2=utf-8">
     <meta name="language" content="English">
     <meta name="author" content="Don, Silas, Nico, Tjeerd">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,7 +27,7 @@
             <article class="search">
                 <article class="icon"></article>
                 <article class="input">
-                    <input type="text" placeholder="Zoeken..." id="mysearch">
+                    <input type="text" placeholder="Zoeken...">
                 </article>
             </article>
             <article>
