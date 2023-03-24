@@ -1,41 +1,10 @@
 <?php
-<<<<<<< Updated upstream
     try{
         $conn = new mysqli("localhost", "root", "", "energy");
     }catch(Exception $e){
         $error = $e->getMessage();
         echo $error;
     }
-=======
-try {
-    $conn = new mysqli("localhost", "root", "root", "energy");
-} catch (Exception $e) {
-    $error = $e->getMessage();
-    echo $error;
-}
-function koekje($conn){
-    $cijfer = null;
-try {
-    $sql = "SELECT AVG(cijfer) as cijfer FROM reacties";
-    $result = $conn->query($sql);
-    while($row = $result->fetch_assoc()) {
-        
-        $cijfer = $row['cijfer'];
-    }
-    
-    $result->close();
-
-} catch (Exception $e) {
-    echo "er zit een fout in de kwerrieeee";
-
-    $cijfer = 0;
-}
-
-return $cijfer;
-}
-$cijfer= koekje($conn);
-// $cijfer = floor($cijfer);
->>>>>>> Stashed changes
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,7 +43,6 @@ $cijfer= koekje($conn);
                 <img id="review-img1" src="../media/afbeeldingen/Review/tjascado_zero_transparant2.png" alt="Tjascado Zero">
                 <h1 id="review-titel">Tjascado Zero</h1>
                 <p>Aantal beoordelingen: <b>5.403</b></p>
-<<<<<<< Updated upstream
                 <article id="review-art1">
             <img id="review-img1" src="../media/afbeeldingen/Review/tjascado_zero_transparant2.png" alt="Tjascado Zero">
                 <h1 id="review-titel">Tjascado Zero</h1>
@@ -96,14 +64,6 @@ $cijfer= koekje($conn);
             <input type="text" required="required">
             <span>Laat hier je review achter!</span>
         </article>
-=======
-                <p><?php echo $cijfer; ?></p>
-            </article>
-            <article id="review-art2">
-                <input type="text" required="required">
-                <span>Laat hier je review achter!</span>
-            </article>
->>>>>>> Stashed changes
     </main>
 </body>
 <!-- echo '<h1 id="review-cijfer">' . $row->cijfer . '</h1>'; -->
