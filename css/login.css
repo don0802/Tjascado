@@ -9,7 +9,8 @@
 /*______________________________________________________________HEADER___________________________________________________________________*/
 
 #home-header{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     position: absolute;
 }
 
@@ -31,11 +32,13 @@
 }
 
 #home-img1, #home-img2{
-    height: 24px;
-    margin-left: 34px;
+    height: 18px;
+    margin-left: 50px;
 }
 
 #home-header > nav{
+    grid-column-start: 2;
+    grid-column-end: 4;
     place-self: center;
     margin-top: 10px;
 }
@@ -67,9 +70,47 @@
     transform-origin: bottom left;
   }
 
-.login {
-  align-items: center;
-}
+/*______________________________________________________________SEARCH BAR___________________________________________________________________*/
+
+.search {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    transition: 0.5s;
+  }
+  
+  .search .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 22px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  
+  .search .icon::before {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border: 3px solid white;
+    border-radius: 50%;
+    transform: translate(-4px,-4px);
+  }
+  
+  .search .icon::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 12px;
+    background: white;
+    transform: translate(6px,6px) rotate(315deg);
+  }
 
 /*______________________________________________________________SEARCH BAR___________________________________________________________________*/
 
@@ -179,71 +220,69 @@ button{
 /*______________________________________________________________SEARCH BAR___________________________________________________________________*/
 
 .search {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  transition: 0.5s;
-  border-radius: 30px;
-  overflow: hidden;
-}
-
-.search .icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30px;
-  height: 30px;
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  cursor: pointer;
-}
-
-.search .icon::before {
-  content: '';
-  position: absolute;
-  width: 13px;
-  height: 13px;
-  border: 3px solid white;
-  border-radius: 50%;
-  transform: translate(-4px,-4px);
-}
-
-.search .icon::after {
-  content: '';
-  position: absolute;
-  width: 3px;
-  height: 12px;
-  background: white;
-  transform: translate(6px,6px) rotate(315deg);
-}
-
-.search.active {
-  width: 222px;
-}
-
-.search .input {
-  position: relative;
-  width: 300px;
-  height: 30px;
-  left: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
-.search .input input {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  left: 0px;
-  color: white;
-  background: transparent;
-}
+    position: relative;
+    width: 30px;
+    height: 30px;
+    transition: 0.5s;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  
+  .search .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  
+  .search .icon::before {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border: 3px solid white;
+    border-radius: 50%;
+    transform: translate(-4px,-4px);
+  }
+  
+  .search .icon::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 12px;
+    background: white;
+    transform: translate(6px,6px) rotate(315deg);
+  }
+  
+  .search.active {
+    width: 222px;
+  }
+  .search .input {
+    position: relative;
+    width: 300px;
+    height: 30px;
+    left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search .input input {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    left: 20px;
+    background: transparent;
+    color: white;
+  }

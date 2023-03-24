@@ -12,11 +12,6 @@ body{
     grid-template-columns: repeat(4, 1fr);
 }
 
-#home-art-1 {
-  display: flex;
-  justify-content: center;
-}
-
 #home-art-1 >  a > img{
     height: 50px;
     margin: 15px;
@@ -35,8 +30,8 @@ body{
 }
 
 #home-img1, #home-img2{
-    height: 24px;
-    margin-left: 34px;
+    height: 18px;
+    margin-left: 50px;
 }
 
 #home-header > nav{
@@ -144,7 +139,6 @@ body{
 .search.active {
   width: 222px;
 }
-
 .search .input {
   position: relative;
   width: 300px;
@@ -153,7 +147,6 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
 }
 
 .search .input input {
@@ -165,6 +158,4 @@ body{
   outline: none;
   font-size: 18px;
   left: 0px;
-  color: white;
-  background: transparent;
 }

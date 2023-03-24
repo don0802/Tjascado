@@ -21,16 +21,16 @@
     <!----------------------------------------------------------HEADER------------------------------------------------------------------------->
     <header id="header">
         <article id="header-art-1">
-            <a href="..//pages/home.php"><img src="../media/afbeeldingen//Home/Vrumona-logo-transparant-wit.png"></a>
+            <a href="..//pages/home.html"><img src="../media/afbeeldingen//Home/Vrumona-logo-transparant-wit.png"></a>
         </article>
         <nav>
             <a href="#">Reviews</a>
-            <a href="pages/aboutus.php">About us</a>
-            <a href="pages/contact.php">Contact</a>
+            <a href="pages/aboutus.html">About us</a>
+            <a href="pages/contact.html">Contact</a>
         </nav>
         <article id="header-art-2">
             <a><img src="../media/afbeeldingen//Home/search-transparent-white1.png" id="header-img1"></a>
-            <a href="../pages/login.php"><img src="../media/afbeeldingen/Home/profile-transparent-white2.png" id="header-img2"></a>
+            <a href="../pages/login.html"><img src="../media/afbeeldingen/Home/profile-transparent-white2.png" id="header-img2"></a>
         </article>
     </header>
     <!----------------------------------------------------------MAIN------------------------------------------------------------------------->
